@@ -1,0 +1,47 @@
+nav {
+  margin-top: 2rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    list-style: none;
+
+    li {
+
+      height: 50px;
+      transition: background-position-x 0.9s linear;
+      text-align: center;
+
+      a {
+        font-size: 1.2rem;
+        color: #777;
+        text-decoration: none;
+        transition: all 0.45s;
+      }
+
+
+      &:hover {
+        background: url("./svg/menuUnderLine.svg");
+        animation: line 1s;
+      }
+
+      &:hover a {
+        color: #ffffff;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    @keyframes line {
+      0% {
+        background-position-x: 390px;
+      }
+    }
+
+  }
+}

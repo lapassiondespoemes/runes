@@ -286,8 +286,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.app {}
-
 header {
   display: flex;
   justify-content: space-around;
@@ -345,6 +343,7 @@ header {
 .btn-75 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
+  appearance: button;
   background-color: #000;
   background-image: none;
   color: #fff;
@@ -354,6 +353,7 @@ header {
   line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
 
@@ -367,7 +367,7 @@ header {
 
 .btn-75 svg {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .btn-75 [hidden] {
