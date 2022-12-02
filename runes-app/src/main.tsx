@@ -6,9 +6,11 @@ import App from './App';
 import ErrorPage from './pages/Error/Error';
 import HomePage from './pages/Home/Home';
 import LoginPage from './pages/Login/Login';
+import MyProfile from './pages/My/MyProfile';
 import NotImplementedPage from './pages/NotImplemented/NotImplemented';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import RegisterPage from './pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "register",
-        element: <NotImplementedPage></NotImplementedPage>
+        element: <RegisterPage></RegisterPage>
       },
       {
         path: "news",
@@ -86,7 +88,7 @@ const router = createBrowserRouter([
       },
       {
         path: "myProfile",
-        element: <NotImplementedPage></NotImplementedPage>
+        element: <MyProfile></MyProfile>
       },
       {
         path: "mySettings",

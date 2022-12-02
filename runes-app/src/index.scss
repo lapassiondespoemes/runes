@@ -393,3 +393,10 @@ header {
 .btn-75:active {
   transform: translateY(3px);
 }
+
+input {
+  background-color: colors.$app-font-color;
+  color: colors.$app-background-color;
+  padding: 0.6rem .6rem;
+  border-radius: 6px;
+}

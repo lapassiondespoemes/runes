@@ -8,3 +8,49 @@ header {
         }
     }
 }
+
+.login-page {
+    /*     border-left: 1px solid white; */
+    padding-left: 5rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    /*     height: 70vh; */
+
+    >div {
+
+        padding-top: 30px;
+    }
+}
+
+.validation-errors {
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5rem;
+
+    >div {
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    label {
+        padding: 1rem;
+    }
+
+    input {
+        margin-bottom: 1rem;
+    }
+}
+
+.page-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: x-large;
+    padding: 30px 5px;
+}
