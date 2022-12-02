@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "email": "revalion@protonmail.com",
+      "password": "$2a$10$cGXcFgobnmpCbynVf7WLWerRmZEnUrFfMSJadLJvpuDZUgvGob4au",
+      "id": 1
+    }
+  ],
+  "userinfos": [
+    {
+      "email": "revalion@protonmail.com",
+      "id": 1
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "label": "news",
+      "name": "Actualités",
+      "navbarPinned": true,
+      "gestionPinned": false
+    },
+    {
+      "id": 2,
+      "label": "texts",
+      "name": "Textes",
+      "navbarPinned": true,
+      "gestionPinned": false
+    },
+    {
+      "id": 3,
+      "label": "events",
+      "name": "Événementiels",
+      "navbarPinned": true,
+      "gestionPinned": false
+    },
+    {
+      "id": 4,
+      "label": "litteraryGames",
+      "name": "Jeux Littéraires",
+      "navbarPinned": true,
+      "gestionPinned": false
+    },
+    {
+      "id": 5,
+      "label": "discussions",
+      "name": "Discussions",
+      "navbarPinned": true,
+      "gestionPinned": false
+    },
+    {
+      "id": 6,
+      "label": "gestion",
+      "name": "Gestion",
+      "navbarPinned": false,
+      "gestionPinned": true
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "value": "poèmes d'amour",
+      "label": "poèmes d'amour",
+      "description": "étiquette rassemblant l'ensemble de la catégorie \"poèmes d'amour\" du site Lpdp",
+      "createdAt": "952470000",
+      "startAt": "000000000",
+      "endAt": "000000000",
+      "mature": false,
+      "authorizedSections": []
+    },
+    {
+      "id": 2,
+      "value": "poèmes tristes",
+      "label": "poèmes tristes",
+      "description": "étiquette rassemblant l'ensemble de la catégorie \"poèmes tristes\" du site Lpdp",
+      "createdAt": "952470000",
+      "startAt": "000000000",
+      "endAt": "000000000",
+      "mature": false
+    },
+    {
+      "id": 3,
+      "value": "poèmes d'amitié",
+      "label": "poèmes d'amitié",
+      "description": "étiquette rassemblant l'ensemble de la catégorie \"poèmes d'amitié\" du site Lpdp",
+      "createdAt": "952470000",
+      "startAt": "000000000",
+      "endAt": "000000000",
+      "mature": false
+    },
+    {
+      "id": 4,
+      "value": "poèmes loufoques",
+      "label": "poèmes loufoques",
+      "description": "étiquette rassemblant l'ensemble de la catégorie \"poèmes d'amitié\" du site Lpdp",
+      "createdAt": "952470000",
+      "startAt": "000000000",
+      "endAt": "000000000",
+      "mature": false
+    },
+    {
+      "id": 5,
+      "value": "autres poèmes",
+      "label": "autres poèmes",
+      "description": "étiquette rassemblant l'ensemble de la catégorie \"poèmes d'amitié\" du site Lpdp",
+      "createdAt": "952470000",
+      "startAt": "000000000",
+      "endAt": "000000000",
+      "mature": false
+    }
+  ]
+}

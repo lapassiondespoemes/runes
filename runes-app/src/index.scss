@@ -1,0 +1,394 @@
+/* https://codepen.io/silkine/pen/QWBxVX */
+
+@use "styles/colors" as colors;
+@use "styles/fonts" as fonts;
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Italic.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-MediumItalic.woff2') format('woff2'),
+    url('./assets/fonts/Lora-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Italic.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-BoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/Lora-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Lora-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-SemiBoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/Lora-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'),
+    url('./assets/fonts/Lora-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/Lora-SemiBold.woff2') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-ExtraBoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-MediumItalic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Medium.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-ExtraBold.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/PlayfairDisplay-SemiBoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/PlayfairDisplay-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  font-family: fonts.$primary-font;
+  font-size: fonts.$primary-font-size;
+  line-height: fonts.$primary-line-height;
+  font-weight: fonts.$primary-font-weight;
+
+  color-scheme: light dark;
+  color: colors.$app-font-color;
+  background-color: colors.$app-background-color;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: fonts.$h1-font-size;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.app {}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+
+.subhead {
+  text-transform: uppercase;
+  border-bottom: 2px solid #2f2f2f;
+  border-top: 2px solid #2f2f2f;
+  padding: 12px 0 12px 0;
+
+}
+
+.site-title {
+  font-family: fonts.$site-title-font;
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 72px;
+}
+
+.header-commands {
+  display: flex;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: complement(colors.$app-font-color);
+    background-color: complement(colors.$app-background-color);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.btn-75,
+.btn-75 *,
+.btn-75 :after,
+.btn-75 :before,
+.btn-75:after,
+.btn-75:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-75 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Lora;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-75:disabled {
+  cursor: default;
+}
+
+.btn-75:-moz-focusring {
+  outline: auto;
+}
+
+.btn-75 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-75 [hidden] {
+  display: none;
+}
+
+.btn-75 {
+  background: #e0e5ec;
+  border-radius: 999px;
+  box-shadow: inset 2px 2px 2px 0 hsla(0, 0%, 100%, 0.5),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: #000;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: .6rem 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-75:active {
+  transform: translateY(3px);
+}
