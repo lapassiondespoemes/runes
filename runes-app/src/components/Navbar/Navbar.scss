@@ -1,13 +1,17 @@
 nav {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     list-style: none;
+    padding: 0;
 
     li {
 

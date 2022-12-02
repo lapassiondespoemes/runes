@@ -1,6 +1,8 @@
 import './App.scss'
 
-import Navbar from './components/Navbar/Navbar';
+import { Link, Outlet } from 'react-router-dom';
+
+import NavbarComponent from './components/Navbar/Navbar';
 import { useTranslation } from 'react-i18next';
 
 const App = () => {
@@ -8,13 +10,14 @@ const App = () => {
   return (
     <div className="app">
       <header>
-        <div className='site-title'>{t('La Passion Des Poèmes')}</div>
+        <Link className='site-title' to="">{t('La Passion Des Poèmes')}</Link>
         <div className='header-commands'>
-          <button className='btn-75'>{t('Connexion')}</button>
-          <button className='btn-75'>{t('Inscription')}</button>
+          <Link className='btn-75' to='login'>{t('Connexion')}</Link>
+          <Link className='btn-75' to='register'>{t('Inscription')}</Link>
         </div>
       </header>
-      <Navbar></Navbar>
+      <NavbarComponent></NavbarComponent>
+      <Outlet></Outlet>
     </div>
   )
 }

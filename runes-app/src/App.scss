@@ -1,0 +1,10 @@
+header {
+    .site-title {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: initial;
+        }
+    }
+}
