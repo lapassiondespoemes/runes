@@ -14,7 +14,7 @@ import RegisterPage from './pages/Register/Register';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "runes/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
