@@ -13,15 +13,25 @@ const RosettaStone: TranslateFragment[] = [
     {
         baliseDescription: "Mise en gras",
         sourceRegex: /(\[b\])(.*)(\[\/b\])/gmi,
-        targetString: "<span style=\"font-weight:bold\">$2</span>"
+        targetString: "<span style=\"font-weight: bold;\">$2</span>"
+    },
+    {
+        baliseDescription: "Mise en italique",
+        sourceRegex: /(\[i\])(.*)(\[\/i\])/gmi,
+        targetString: "<span style=\"font-style: italic;\">$2</span>"
+    },
+    {
+        baliseDescription: "Mise en souligné",
+        sourceRegex: /(\[u\])(.*)(\[\/u\])/gmi,
+        targetString: "<span style=\"text-decoration: underline;\">$2</span>"
     },
 ]
 
 const LpdpBBCode2Html = (sourceText: string): string => {
-    let targetText: string = ""
-    RosettaStone.forEach((value) => {
-        targetText = sourceText.replaceAll(value.sourceRegex, value.targetString)
-    })
+    let targetText: string = sourceText
+    for (let i = 0; i < RosettaStone.length; i++) {
+        targetText = targetText.replaceAll(RosettaStone[i].sourceRegex, RosettaStone[i].targetString)
+    }
     return targetText
 }
 
