@@ -14,7 +14,6 @@ nav {
     padding: 0;
 
     li {
-
       height: 50px;
       transition: background-position-x 0.9s linear;
       text-align: center;
@@ -25,7 +24,6 @@ nav {
         text-decoration: none;
         transition: all 0.45s;
       }
-
 
       &:hover {
         background: url("./svg/menuUnderLine.svg");
@@ -46,6 +44,5 @@ nav {
         background-position-x: 390px;
       }
     }
-
   }
 }

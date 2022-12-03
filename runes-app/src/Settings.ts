@@ -1,5 +1,5 @@
 class Settings {
-    public rlApiUrl = "http://localhost:3004"
+    public rlApiUrl = import.meta.env.VITE_RL_API_URL
 }
 
 const settings = new Settings()
