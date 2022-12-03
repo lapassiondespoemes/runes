@@ -11,6 +11,11 @@ import NotImplementedPage from './pages/NotImplemented/NotImplemented';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import RegisterPage from './pages/Register/Register';
+import SectionLayout from './layouts/SectionLayout/SectionLayout';
+import { SectionNavItem } from './components/Navbar/Navbar';
+import settings from './Settings';
+
+const url = settings.rlApiUrl + "/api/sections"
 
 const router = createBrowserRouter([
   {
@@ -31,28 +36,12 @@ const router = createBrowserRouter([
         element: <RegisterPage></RegisterPage>
       },
       {
-        path: "news",
-        element: <NotImplementedPage></NotImplementedPage>
-      },
-      {
-        path: "texts",
-        element: <NotImplementedPage></NotImplementedPage>
-      },
-      {
-        path: "events",
-        element: <NotImplementedPage></NotImplementedPage>
-      },
-      {
-        path: "litteraryGames",
-        element: <NotImplementedPage></NotImplementedPage>
-      },
-      {
-        path: "discussions",
-        element: <NotImplementedPage></NotImplementedPage>
-      },
-      {
         path: "members",
         element: <NotImplementedPage></NotImplementedPage>
+      },
+      {
+        path: "sections/:section",
+        element: <SectionLayout></SectionLayout>
       },
       {
         path: "moderation",

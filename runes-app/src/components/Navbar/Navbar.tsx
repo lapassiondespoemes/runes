@@ -3,12 +3,12 @@ import './Navbar.scss'
 import { Link } from "react-router-dom"
 import settings from "../../Settings"
 import { useFetch } from "usehooks-ts"
-import { useGlobalContext } from '../../GobalContext'
+import { useGlobalContext } from '../../GlobalContext'
 import { useTranslation } from 'react-i18next'
 
 const url = settings.rlApiUrl + "/api/sections?navbarPinned=true"
 
-interface SectionNavItem {
+export interface SectionNavItem {
     label: string,
     name: string
 }
@@ -35,26 +35,12 @@ const NavbarRegularItems = () => {
 
 const NavbarComponent = () => {
     const { t, i18n } = useTranslation()
-    const { data, error } = useFetch<SectionNavItem[]>(url)
-
-    if (error) return (<nav>
-        <ul>
-            <li>{t('Impossible de récupérer la liste des sections')}</li>
-            <NavbarRegularItems></NavbarRegularItems>
-        </ul>
-    </nav>)
-
-    if (!data) return (<nav>
-        <ul>
-            <li>{t('Chargement en cours...')}</li>
-            <NavbarRegularItems></NavbarRegularItems>
-        </ul>
-    </nav>)
+    const { config } = useGlobalContext()
 
     return (<nav>
         <ul>
-            {data?.map((e: SectionNavItem, i) => {
-                return (<li key={i}><Link to={e.label}>{t(e.name)}</Link></li>)
+            {config.sections?.filter((e) => e.navbarPinned === true)?.map((e: SectionNavItem, i) => {
+                return (<li key={i}><Link to={"sections/" + e.label}>{t(e.name)}</Link></li>)
             })}
             <NavbarRegularItems></NavbarRegularItems>
         </ul>
