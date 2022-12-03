@@ -1,0 +1,22 @@
+{
+    "name": "akrabat/slim4-empty",
+    "description": "Empty Slim 4 project",
+    "keywords": [
+        "slim", "slim framwork", "psr7"
+    ],
+    "homepage": "http://github.com/akrabat/slim4-empty",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Allen",
+            "email": "rob@akrabat.com",
+            "homepage": "https://akrabat.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.2",
+        "slim/psr7": "^1.0",
+        "zircote/swagger-php": "^4.5"
+    }
+}
