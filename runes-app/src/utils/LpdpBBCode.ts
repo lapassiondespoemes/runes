@@ -5,6 +5,38 @@ interface TranslateFragment {
 }
 
 const RosettaStone: TranslateFragment[] = [
+    /* ATTENTION, L'ordre a une importance */
+    {
+        baliseDescription: "Retour à la ligne 1",
+        sourceRegex: /(.*)(\r\n)/gmi,
+        targetString: "$1<br\/>"
+    },
+    {
+        baliseDescription: "Retour à la ligne 2",
+        sourceRegex: /(.*)(\n)/gmi,
+        targetString: "$1<br\/>"
+    },
+    /* *********************************** */
+    {
+        baliseDescription: "Retour à la ligne 3",
+        sourceRegex: /(\[br\])(.*)/gmi,
+        targetString: "<br\/>$2"
+    },
+    {
+        baliseDescription: "Retour à la ligne 4",
+        sourceRegex: /(\[BR\])(.*)/gmi,
+        targetString: "<br\/>$2"
+    },
+    {
+        baliseDescription: "Retour à la ligne 5",
+        sourceRegex: /(.*)(\[br\])/gmi,
+        targetString: "$1<br\/>"
+    },
+    {
+        baliseDescription: "Retour à la ligne 6",
+        sourceRegex: /(.*)(\[BR\])/gmi,
+        targetString: "$1<br\/>"
+    },
     {
         baliseDescription: "Lien courriel",
         sourceRegex: /\[email\]([\w\.-]+)@([\w\.-]+)\[\/email\]/gmi,
@@ -29,6 +61,26 @@ const RosettaStone: TranslateFragment[] = [
         baliseDescription: "Mise en barré",
         sourceRegex: /(\[s\])(.*)(\[\/s\])/gmi,
         targetString: "<span style=\"text-decoration: line-through;\">$2</span>"
+    },
+    {
+        baliseDescription: "Mise en texte pré-formaté",
+        sourceRegex: /(\[pre\])(.*)(\[\/pre\])/gmi,
+        targetString: "<pre>$2</pre>"
+    },
+    {
+        baliseDescription: "Mise en page: aligné à gauche",
+        sourceRegex: /(\[left\])(.*)(\[\/left\])/gmi,
+        targetString: "<span style=\"text-align: left;\">$2</span>"
+    },
+    {
+        baliseDescription: "Mise en page: aligné à droite",
+        sourceRegex: /(\[right\])(.*)(\[\/right\])/gmi,
+        targetString: "<span style=\"text-align: right;\">$2</span>"
+    },
+    {
+        baliseDescription: "Mise en page: justifié",
+        sourceRegex: /(\[justify\])(.*)(\[\/justify\])/gmi,
+        targetString: "<span style=\"text-align: justify;\">$2</span>"
     },
 ]
 
