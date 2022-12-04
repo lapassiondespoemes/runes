@@ -1,32 +1,31 @@
 import settings from "../../Settings";
-import { useFetch } from "usehooks-ts";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const url = settings.rlApiUrl + "/api/login"
 
-interface LoginForm {
+interface ILoginForm {
     email: string,
     password: string
 }
 
-interface User {
+interface IUser {
     email: string,
     id: number
 }
-interface LoginResponse {
+interface ILoginResponse {
     accessToken: string,
-    user: User
+    user: IUser
 }
 
 export default function LoginPage() {
 
     const [loginError, setLoginError] = useState<string | undefined>(undefined)
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<LoginForm>({ reValidateMode: 'onBlur' });
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<ILoginForm>({ reValidateMode: 'onBlur' });
     const { t, i18n } = useTranslation()
 
-    const onSubmit = async (form: LoginForm) => {
+    const onSubmit = async (form: ILoginForm) => {
         const response = await window.fetch(url, {
             method: 'post',
             headers: [
@@ -37,7 +36,7 @@ export default function LoginPage() {
             if (!response.ok) {
                 setLoginError(response.statusText)
             } else {
-                const data = response.json() as Promise<LoginResponse>;
+                const data = response.json() as Promise<ILoginResponse>;
                 await data.then((d) => {
                     console.log(d)
                 })

@@ -25,6 +25,11 @@ const RosettaStone: TranslateFragment[] = [
         sourceRegex: /(\[u\])(.*)(\[\/u\])/gmi,
         targetString: "<span style=\"text-decoration: underline;\">$2</span>"
     },
+    {
+        baliseDescription: "Mise en barré",
+        sourceRegex: /(\[s\])(.*)(\[\/s\])/gmi,
+        targetString: "<span style=\"text-decoration: line-through;\">$2</span>"
+    },
 ]
 
 const LpdpBBCode2Html = (sourceText: string): string => {

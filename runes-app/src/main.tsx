@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App';
 import ErrorPage from './pages/Error/Error';
 import HomePage from './pages/Home/Home';
+import { ISectionNavItem } from './components/Navbar/Navbar';
 import LoginPage from './pages/Login/Login';
 import MyProfile from './pages/My/MyProfile';
 import NotImplementedPage from './pages/NotImplemented/NotImplemented';
@@ -12,7 +13,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import RegisterPage from './pages/Register/Register';
 import SectionLayout from './layouts/SectionLayout/SectionLayout';
-import { SectionNavItem } from './components/Navbar/Navbar';
 import settings from './Settings';
 
 const url = settings.rlApiUrl + "/api/sections"
